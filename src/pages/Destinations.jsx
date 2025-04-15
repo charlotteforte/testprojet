@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import destinationsData from '../data/destinationsData.json';
 
 const Destinations = () => {
@@ -20,10 +21,44 @@ const Destinations = () => {
   useEffect(() => {
     if (filter === 'all') {
       setFilteredDestinations(destinationsData);
-    } else {
-      // This is a placeholder for actual filtering logic
-      // In a real app, you might filter by continent, price range, etc.
-      setFilteredDestinations(destinationsData);
+    } else if (filter === 'popular') {
+      // Filter destinations with rating >= 4.5
+      setFilteredDestinations(destinationsData.filter(dest => parseFloat(dest.rating) >= 4.5));
+    } else if (filter === 'beach') {
+      // Filter destinations with beach-related activities
+      setFilteredDestinations(destinationsData.filter(dest => 
+        dest.activities.some(activity => 
+          activity.toLowerCase().includes('beach') || 
+          activity.toLowerCase().includes('ocean') || 
+          activity.toLowerCase().includes('swim') ||
+          activity.toLowerCase().includes('snorkel') ||
+          activity.toLowerCase().includes('diving')
+        )
+      ));
+    } else if (filter === 'adventure') {
+      // Filter destinations with adventure-related activities
+      setFilteredDestinations(destinationsData.filter(dest => 
+        dest.activities.some(activity => 
+          activity.toLowerCase().includes('hike') || 
+          activity.toLowerCase().includes('trek') || 
+          activity.toLowerCase().includes('climb') ||
+          activity.toLowerCase().includes('adventure') ||
+          activity.toLowerCase().includes('safari') ||
+          activity.toLowerCase().includes('expedition')
+        )
+      ));
+    } else if (filter === 'cultural') {
+      // Filter destinations with cultural-related activities
+      setFilteredDestinations(destinationsData.filter(dest => 
+        dest.activities.some(activity => 
+          activity.toLowerCase().includes('museum') || 
+          activity.toLowerCase().includes('history') || 
+          activity.toLowerCase().includes('temple') ||
+          activity.toLowerCase().includes('culture') ||
+          activity.toLowerCase().includes('heritage') ||
+          activity.toLowerCase().includes('art')
+        )
+      ));
     }
   }, [filter]);
 
@@ -94,7 +129,8 @@ const Destinations = () => {
         </div>
 
         {/* Destinations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredDestinations.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredDestinations.map((destination, index) => (
             <motion.div
               key={destination.id}
@@ -130,9 +166,12 @@ const Destinations = () => {
                 
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-500">{destination.duration}</span>
-                  <button className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                  <Link 
+                    to={`/destinations/${destination.id}`} 
+                    className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+                  >
                     View Details
-                  </button>
+                  </Link>
                 </div>
                 
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -153,7 +192,19 @@ const Destinations = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+          </div>
+        ) : (
+          <div className="text-center py-16">
+            <h3 className="text-2xl font-display font-bold text-gray-700 mb-4">No destinations found</h3>
+            <p className="text-gray-600 mb-6">Try selecting a different filter category</p>
+            <button 
+              onClick={() => setFilter('all')}
+              className="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              View All Destinations
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
