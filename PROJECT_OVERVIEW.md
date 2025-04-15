@@ -12,6 +12,7 @@ This project is a travel agency website that uses parallax scrolling effects to 
 - **Multi-page Navigation**: React Router implementation for navigating between different pages
 - **Destinations Page**: A dedicated page showcasing various travel destinations with filtering options
 - **Animated Card Grid**: Destination cards that animate into view as the user scrolls down the page
+- **About Page**: A comprehensive page that tells the company's story, showcases team members, and highlights core values
 
 ## Folder Structure
 ```
@@ -28,7 +29,8 @@ wanderlust-travels/
 │   │   └── destinationsData.json
 │   ├── pages/
 │   │   ├── Home.jsx
-│   │   └── Destinations.jsx
+│   │   ├── Destinations.jsx
+│   │   └── About.jsx
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
@@ -53,4 +55,4 @@ wanderlust-travels/
 - **Explicit React Imports**: Added explicit React imports to all components to ensure proper hook functionality
 
 ## Current State
-The project now includes a multi-page structure with a home page and a destinations page. The destinations page features a grid of travel destinations with details like price, duration, rating, and activities. Each destination card animates into view as the user scrolls down the page, and the page includes filter buttons for different types of travel experiences. The navigation has been updated to support routing between pages.
+The project now includes a multi-page structure with a home page, destinations page, and about page. The destinations page features a grid of travel destinations with details like price, duration, rating, and activities, with functional filtering options for different types of travel experiences. The about page provides information about the company's story, team members, and core values, all with smooth animations as the user scrolls. The navigation has been updated to support routing between all pages.
