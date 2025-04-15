@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ParallaxHero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -76,7 +77,7 @@ const ParallaxHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <a href="/destinations" className="cta-button mr-4 inline-block">Explore Destinations</a>
+            <Link to="/destinations" className="cta-button mr-4 inline-block">Explore Destinations</Link>
             <button className="bg-transparent hover:bg-white/20 text-white border-2 border-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
               View Packages
             </button>

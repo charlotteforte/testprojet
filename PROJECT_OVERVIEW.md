@@ -50,6 +50,7 @@ wanderlust-travels/
 - **Custom Fonts**: Using Montserrat for body text and Playfair Display for headings
 - **Data Separation**: Content is stored in separate JSON files for easy management
 - **Component Structure**: Organized components into logical folders for better maintainability
+- **Explicit React Imports**: Added explicit React imports to all components to ensure proper hook functionality
 
 ## Current State
 The project now includes a multi-page structure with a home page and a destinations page. The destinations page features a grid of travel destinations with details like price, duration, rating, and activities. Each destination card animates into view as the user scrolls down the page, and the page includes filter buttons for different types of travel experiences. The navigation has been updated to support routing between pages.

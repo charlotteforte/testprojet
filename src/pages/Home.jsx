@@ -1,3 +1,4 @@
+import React from 'react';
 import ParallaxHero from '../components/ParallaxHero';
 import DynamicCTA from '../components/DynamicCTA';
 
