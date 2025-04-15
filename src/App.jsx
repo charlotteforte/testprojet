@@ -1,14 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import ParallaxHero from './components/ParallaxHero';
-import DynamicCTA from './components/DynamicCTA';
+import Home from './pages/Home';
+import Destinations from './pages/Destinations';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <ParallaxHero />
-      <DynamicCTA />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/destinations" element={<Destinations />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

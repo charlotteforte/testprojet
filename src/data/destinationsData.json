@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Santorini, Greece",
+    "description": "Experience the breathtaking views of white-washed buildings against the deep blue Aegean Sea. Santorini offers stunning sunsets, volcanic beaches, and charming villages perched on cliff tops.",
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "rating": 4.8,
+    "price": "$1,899",
+    "duration": "7 days",
+    "activities": ["Island Hopping", "Wine Tasting", "Volcano Tour", "Beach Relaxation"]
+  },
+  {
+    "id": 2,
+    "name": "Kyoto, Japan",
+    "description": "Discover the cultural heart of Japan with its ancient temples, traditional tea houses, and beautiful gardens. Experience the magic of cherry blossoms in spring or the vibrant colors of autumn foliage.",
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "rating": 4.7,
+    "price": "$2,299",
+    "duration": "10 days",
+    "activities": ["Temple Visits", "Tea Ceremony", "Bamboo Forest Walk", "Kimono Experience"]
+  },
+  {
+    "id": 3,
+    "name": "Machu Picchu, Peru",
+    "description": "Trek through the Andes to discover the lost city of the Incas. This UNESCO World Heritage site offers stunning mountain views, ancient ruins, and a glimpse into a fascinating civilization.",
+    "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "rating": 4.9,
+    "price": "$2,499",
+    "duration": "9 days",
+    "activities": ["Inca Trail Hike", "Historical Tours", "Local Cuisine", "Cusco Exploration"]
+  },
+  {
+    "id": 4,
+    "name": "Bali, Indonesia",
+    "description": "Immerse yourself in the tropical paradise of Bali with its lush rice terraces, sacred temples, and pristine beaches. Experience the unique blend of spirituality, culture, and natural beauty.",
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2038&q=80",
+    "rating": 4.6,
+    "price": "$1,699",
+    "duration": "8 days",
+    "activities": ["Temple Visits", "Surfing", "Rice Terrace Trekking", "Spa Treatments"]
+  },
+  {
+    "id": 5,
+    "name": "Amalfi Coast, Italy",
+    "description": "Drive along the stunning coastline of southern Italy, with its colorful cliffside villages, crystal-clear waters, and delicious cuisine. Experience the dolce vita in this Mediterranean paradise.",
+    "image": "https://images.unsplash.com/photo-1612698093158-e07ac200d44e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "rating": 4.7,
+    "price": "$2,099",
+    "duration": "6 days",
+    "activities": ["Coastal Drives", "Boat Tours", "Cooking Classes", "Beach Days"]
+  },
+  {
+    "id": 6,
+    "name": "Serengeti, Tanzania",
+    "description": "Witness the incredible wildlife of the African savanna on a safari adventure. Experience the Great Migration, spot the Big Five, and enjoy breathtaking sunsets over the endless plains.",
+    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80",
+    "rating": 4.9,
+    "price": "$3,299",
+    "duration": "12 days",
+    "activities": ["Safari Game Drives", "Hot Air Balloon Rides", "Cultural Visits", "Photography"]
+  }
+]

@@ -76,7 +76,7 @@ const ParallaxHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <button className="cta-button mr-4">Explore Destinations</button>
+            <a href="/destinations" className="cta-button mr-4 inline-block">Explore Destinations</a>
             <button className="bg-transparent hover:bg-white/20 text-white border-2 border-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
               View Packages
             </button>
